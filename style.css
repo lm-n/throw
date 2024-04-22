@@ -1,0 +1,111 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(250, 167, 240);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+canvas {
+  display: block;
+}
+.chart-wrapper {
+  display: inline-block;
+  position: relative;
+  height: 400px;
+  width: 95%;
+}
+.corners {
+  border-radius: 25px;
+  border: 2px solid #ffffff;
+  padding: 10px; 
+  margin-left: 20;
+  margin-top: 0;
+  margin-bottom: 15;
+  margin-right: 20; 
+  background-color: rgb(255, 255, 255);
+}
+.hideContent{
+  display: none;
+  visibility: hidden;
+}
+.showContent{
+  visibility: visible;
+  margin-top: 5;
+  margin-left: 5;
+}
+.titleCont{
+  white-space: nowrap; /* Prevent line break */
+}
+
+.icon {
+  display: inline-block;
+  position: absolute;
+  right: 40;
+}
+#tfjs-visor-container{
+  display: none;
+  visibility: hidden;
+}
+.center-element {
+  /* Optional: Adjust the width and height properties */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-child {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex:  1 1 auto;
+  -webkit-flex:  1 1 auto;
+  -ms-flex:  1 1 auto;
+  flex:  1 1 auto;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  height: 125px;
+  margin-right: 10px; 
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: red;
+  padding-right: 20;
+} 
+
+.deleteClassButton{
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: red;
+}

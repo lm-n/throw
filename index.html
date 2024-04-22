@@ -1,0 +1,97 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Throwing Classifier</title>
+
+  <script language="javascript" type="text/javascript" src="webble.js"></script>
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/mathjs@11.8.2/lib/browser/math.js"></script>
+  <script type="text/javascript" src="trainingData.js"></script>
+  <script type="text/javascript" src="model.js"></script>
+  <script type="text/javascript" src="test.js"></script>
+  <script type="text/javascript" src="dummy.js"></script>
+  <script type="text/javascript" src="style.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  .bold-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+
+<body>
+  <div class="container"><h1 class="center-element">Throwing Classifier</h1></div>
+  <div id="connect" class="corners">
+    <div class="titleCont">
+    <h2>🔌 Connect your microBit
+      <div id="connectCO" class="icon">
+        <a href="javascript:collapseConnect();">❎</a>
+      </div>
+    </h2>
+    </div>
+    <div id = "connectContent" class="showContent">
+      <div id="connectMicro">
+        <p>Prior to connecting your microBit make sure that you have uploaded the 
+          <a href="https://makecode.microbit.org/S38115-90979-26199-65920" target="_blank">
+          sample code</a>
+          to the microcontroller.
+          Once you upload the code press on the button below to connect!  
+        </p>
+        <button id="searchButton" onClick="searchDevice()"> Pair your microBit</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="addData" class="corners">
+    <h2>📈 Upload dataset
+      <div id="allDataCO" class="icon">
+        <a href="javascript:openAllData();">🔽</a>
+      </div>
+    </h2>
+    <a id="downloadAnchorElem" style="display:none"></a>
+    <div id="allDataContent" class="hideContent">
+      <div class="flex">
+        <div id="upldButton" class="hideContent">
+          <button id="uploadButton" class="buttin" onClick="showUpload()"> Upload file</button>
+        </div>
+        <div id="upld" class="hideContent">
+          <form id="upload"><label for="file">Upload data:</label><input type="file" id="file" accept=".json"><button>Upload</button></form>
+        </div>
+        <div id="dwnld"></div>
+      </div>
+      <div id="myClasses"></div>
+    </div>
+  </div>
+
+  <div id="trainMdl" class="corners">
+    <h2>🏋🏾 Train your model
+      <div id="trainMdlCO" class="icon">
+        <a href="javascript:openTrainMdl();">🔽</a>
+      </div>
+    </h2>
+    <div id="trainMdlContent" class="hideContent">
+      <div id="trainButtonDiv">To train your model you must add more training data to have at least 2 classes with 4 data samples each.</div>
+    </div>
+  </div>
+
+
+  <div id="testMdl" class="corners">
+    <h2> ⚾️ 🏟 🧢 ⚾️ 🏟 🧢 ⚾️ 🏟 🧢 ⚾️ 
+      <div id="testMdlCO" class="icon">
+        <a href="javascript:openTestMdl();">🔽</a>
+      </div>
+    </h2>
+    <div id="testMdlContent" class="hideContent">
+      <div id="testModelButtonDiv">Add training data and train a model first!</div>
+      <div id = "testChart" ></div>
+    </div> 
+  </div>
+
+</body>
+
+</html>
